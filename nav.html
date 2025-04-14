@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Hostel</title>
+	<style>
+		
+			#image
+				{
+			
+			background-size: cover;
+			height:100%;
+			background-repeat: no-repeat;
+			background-position:center;
+			background-attachment:fixed;
+			}
+		
+		.menu{
+			height: 70px;
+			width: 70px;
+			right: 70px;
+			top: 20px;
+			text-align: center;
+			position: absolute;
+			background-color: white;
+			overflow: hidden;
+			transition: all 0.2s ease;
+			z-index: 999;
+		}
+		.menu.active{
+			width: calc(100% - 140px);
+		}
+		.menu.active .menucontent *{
+			opacity: 1;
+		}
+
+		.menu.active span i:nth-child(1){
+			transform: rotate(-45deg) translate(-50%,-50%);
+			top: 50%;
+		}
+
+
+		.menu.active span i:nth-child(2){
+			transform: translateX(-100px);
+			opacity: 0;
+		}
+
+
+		.menu.active span i:nth-child(3){
+			transform: rotate(-45deg) translate(-50%,-50%);
+			top: 50%;
+		}
+
+
+
+		.menu. span i {
+			position: absolute;
+			transform-origin: 50% 50%;
+			width: 45%;
+			height: 2px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			background-color: #ccc;
+			transition: transform 0.3s ease,opacity 0.1s ease 0.1s;
+		}
+
+		.menu span i:nth-child(1){
+			top: 40%;
+		}
+
+		.menu span i:nth-child(2){
+			top: 50%;
+		}
+
+		.menu span i:nth-child(3){
+			top: 60%;
+		}
+
+		.menu .menucontent *{
+			opacity: 0;
+		}
+
+		.menu .menucontent ul li{
+			display: inline-block;
+			margin-left: 50px;
+			margin-right: 50px;
+			color: #2d3235;	
+			transition: opacity 0.3s ease 0.3s;
+			cursor: pointer;
+			position: relative;
+		}
+
+
+
+
+
+ 
+	</style>
+</head>
+<body>
+	
+	<div id="image" class="image-responsive">
+		<img src="https://localhost/Hostel/images/img1.jpg">
+	<div class="menu">
+
+		<span class="toggle">
+			<i></i>
+			<i></i>
+			<i></i>
+		</span>
+		<div class="menucontent">
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact</li>
+				<li>About us</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
